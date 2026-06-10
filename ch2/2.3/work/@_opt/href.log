@@ -1,0 +1,9 @@
+BEGIN 3:my_if:fast__1:work
+    clk :  1:tb_top_sv_unit:fast:work
+    valid :  1:tb_top_sv_unit:fast:work
+    data :  1:tb_top_sv_unit:fast:work
+END 
+BEGIN 3:my_if:fast__2:work
+    data :  1:top_tb:fast:work
+    valid :  1:top_tb:fast:work
+END 

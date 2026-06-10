@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(///wsl.localhost/Ubuntu/home/bigvegetable/UVM/myself/ch2/**)",
+      "Bash(sed -i 's/bit \\\\[47:0\\\\] tem_data;/bit [47:0] tmp_data;/' my_driver.sv)",
+      "Bash(sed -i 's/data_q\\\\.szie/data_q.size\\(\\)/' my_driver.sv)",
+      "Bash(sed -i 's/virutal function/virtual function/' my_env.sv)",
+      "Bash(sed -i 's/tr\\\\.enter_type/tr.ether_type/g' my_monitor.sv)",
+      "Bash(sed -i 's/repeat\\(3\\) @\\(posedge clk\\);/repeat\\(3\\) @\\(posedge vif.clk\\);/' my_driver.sv)",
+      "Bash(sed -i 's/i < 3 ; i++/i < 4 ; i++/' my_monitor.sv)",
+      "Bash(sed -i 's/tr.ether_type = {tr.ether_type\\\\[7\\\\],/tr.ether_type = {tr.ether_type[7:0],/' my_monitor.sv)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(sed -i 's/function new\\(string name = \"my_monitor\", uvm_component parent = null\\);/`uvm_component_utils\\(my_monitor\\)\\\\n    function new\\(string name = \"my_monitor\", uvm_component parent = null\\);/' my_monitor.sv)",
+      "Bash(sed -i 's/class my_driver extends uvm_driver;/class my_driver extends uvm_driver#\\(my_transaction\\);/' my_driver.sv)",
+      "Bash(sed -i 's/tr\\\\.my_printf\\(\\);/tr.my_print\\(\\);/' my_monitor.sv)",
+      "Bash(chmod +x run_sim.sh)"
+    ]
+  }
+}

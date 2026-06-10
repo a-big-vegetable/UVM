@@ -1,0 +1,160 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/bigvegetable/UVM/myself/ch2/2.3
+T_opt
+!s11d tb_top_sv_unit /home/bigvegetable/UVM/myself/ch2/2.3/work 1 my_if 1 /home/bigvegetable/UVM/myself/ch2/2.3/work 
+!s11d uvm_pkg /home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d 1 my_if 1 /home/bigvegetable/UVM/myself/ch2/2.3/work 
+!s110 1780456881
+V`0CS[hYYh]JR<]g[4=Ycm2
+04 6 4 work top_tb fast 0
+=1-000ae431a4f1-6a1f9db0-a9488-6dbc
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U4 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vdut
+Z3 2../dut/dut.sv|tb_top.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1780456879
+!i10b 1
+!s100 JL1oZ1efjj^VOoDDY[dbS3
+IXK>hjH6_=`CdZM2MLKAl;2
+S1
+R1
+w1780126639
+8../dut/dut.sv
+F../dut/dut.sv
+!i122 7
+L0 1 27
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z8 !s108 1780456879.000000
+Z9 !s107 my_env.sv|my_monitor.sv|my_driver.sv|my_transaction.sv|my_if.sv|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|tb_top.sv|../dut/dut.sv|
+Z10 !s90 +acc|+incdir+../dut|../dut/dut.sv|tb_top.sv|
+!i113 0
+Z11 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 +acc +incdir+../dut -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Ymy_if
+R3
+R4
+Z13 DXx6 mtiUvm 7 uvm_pkg 0 22 MiVhEBb9cnBN5^J=<XBKI2
+Z14 DXx4 work 14 tb_top_sv_unit 0 22 RXeaQ=jO?9ea1iDKoWg>61
+R5
+R6
+r1
+!s85 0
+!i10b 1
+!s100 ^XA;6Ob^I_dFD4jlFR8b^1
+I3`2NMWd@VAMb9Ig82_0gb3
+Z15 !s105 tb_top_sv_unit
+S1
+R1
+Z16 w1780399665
+Z17 Fmy_if.sv
+Z18 Ftb_top.sv
+!i122 7
+L0 1 0
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
+Xtb_top_sv_unit
+!i114 1
+R3
+!s115 my_if
+R4
+R13
+R5
+VRXeaQ=jO?9ea1iDKoWg>61
+r1
+!s85 0
+!i10b 1
+!s100 emINVFEeG5VDY`>AZz[Pi3
+IRXeaQ=jO?9ea1iDKoWg>61
+!i103 1
+S1
+R1
+w1780456861
+Z19 8tb_top.sv
+R18
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
+F/home/bigvegetable/altera/24.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
+R17
+Fmy_transaction.sv
+Fmy_driver.sv
+Fmy_monitor.sv
+Fmy_env.sv
+!i122 7
+L0 4 0
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
+vtop_tb
+R3
+R4
+R13
+R14
+R5
+R6
+r1
+!s85 0
+!i10b 1
+!s100 G_F8Ci`Rh8OS6dl=6[GBK2
+IEhDi=`44LFU7CC4KAE^5@2
+R15
+S1
+R1
+R16
+R19
+R18
+!i122 7
+L0 12 40
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
