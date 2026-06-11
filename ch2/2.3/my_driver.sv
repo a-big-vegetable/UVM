@@ -10,7 +10,7 @@ class my_driver extends uvm_driver#(my_transaction);
     virtual my_if vif;
     virtual function void build_phase(uvm_phase phase);//同一个阶段实例化一个phase,方便计数，当然计数的用的不是bulid_phase
         super.build_phase(phase);
-        if(~uvm_config_db#(virtual my_if)::get(this, "", "vif", vif))//第一个参数+第二个参数就是完整的路径
+        if(!uvm_config_db#(virtual my_if)::get(this, "", "vif", vif))//第一个参数+第二个参数就是完整的路径
             `uvm_fatal("my_driver","virtual interface must be set for vif")//触发时会直接调用$finish
     endfunction
 
@@ -29,7 +29,7 @@ task my_driver::main_phase(uvm_phase phase);//传入参数phase,为了能调用r
     end
         for(int i = 0 ;i < 2; i++) begin
             tr = new("tr");
-            assert(tr.randomize() with {pload.size == 200;});
+            assert(tr.randomize() with {pload.size() == 200;});
             one_pkt(tr);
         end
         repeat(5)@(posedge vif.clk);
@@ -58,7 +58,7 @@ task my_driver::one_pkt(my_transaction tr);
        tmp_data = (tmp_data >> 8);
     end
     //push payload to data_q
-    for(int i = 0; i < tr.pload.size; i++) begin
+    for(int i = 0; i < tr.pload.size(); i++) begin
        data_q.push_back(tr.pload[i]);
     end
     //push crc to data_q

@@ -9,8 +9,8 @@ class my_transaction extends uvm_sequence_item;
     rand byte      pload[];//动态数组，引出去记得new()_
 
     constraint pload_cons{
-        pload.size >= 46;
-        pload.size <= 1500;
+        pload.size() >= 46;
+        pload.size() <= 1500;
     }
 
    function bit[31:0] calc_crc();
@@ -26,6 +26,7 @@ class my_transaction extends uvm_sequence_item;
     function new(string name = "my_transaction");
         super.new(name);
     endfunction
+
     function void my_print();
         $display("dmac = %0h", dmac);//%0h可以不用打印出高位没有用的0
         $display("smac = %0h", smac);
@@ -36,6 +37,37 @@ class my_transaction extends uvm_sequence_item;
         $display("crc = %0h", crc);
     endfunction
 
+    function void my_copy(my_transaction tr);
+        if (tr == null) begin
+            `uvm_fatal("my_transaction", "tr is null!!!")
+        end
+        dmac = tr.dmac;
+        smac = tr.smac;
+        ether_type = tr.ether_type;
+        crc = tr.crc;
+        pload = new[tr.pload.size()];
+        for(int i = 0; i < pload.size(); i++)begin
+            pload[i] = tr.pload[i];
+        end
+    endfunction
+
+    function bit my_compore(my_transaction tr);
+        bit result;
+        if(tr == null) begin
+            `uvm_fatal("my_transaction", "tr is null")
+        end
+        result = ((dmac == tr.dmac) &&
+                  (smac == tr.smac) &&
+                  (ether_type == tr.ether_type) &&
+                  (crc == tr.crc));
+        if (pload.size() != tr.pload.size)
+            result = 0;
+        for(int i = 0; i < pload.size(); i++) begin
+            if(pload[i] != tr.pload[i])
+                result = 0;
+        end
+        return result;
+    endfunction
 endclass
 
 `endif
