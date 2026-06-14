@@ -10,6 +10,7 @@ import uvm_pkg::*;
 `include "my_agent.sv"
 `include "my_model.sv"
 `include "my_scoreboard.sv"
+`include "my_sequencer.sv"
 
 module top_tb;
 reg clk;
