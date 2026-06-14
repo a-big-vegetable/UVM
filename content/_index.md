@@ -1,0 +1,5 @@
+---
+title: "vegetable"
+type: "home"
+---
+

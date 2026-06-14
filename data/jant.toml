@@ -1,0 +1,58 @@
+format = "jant-site"
+version = 1
+generated_at = "2026-06-14T09:09:24.000Z"
+site_name = "vegetable"
+site_description = ""
+site_language = "zh-Hans"
+home_default_view = "latest"
+main_rss_feed = "featured"
+show_jant_branding_on_home = false
+show_header_avatar = false
+noindex = false
+site_avatar_mode = "none"
+favicon_mode = "default"
+apple_touch_mode = "default"
+theme_id = "tufte"
+default_theme_id = "tufte"
+font_theme_id = "classic"
+theme_mode = "auto"
+page_size = 50
+archive_page_size = 50
+rss_feed_limit = 50
+favicon_path = "/favicon.ico"
+apple_touch_icon_path = "/apple-touch-icon.png"
+
+[[nav]]
+type = "system"
+label = "Latest"
+url = "/"
+system_key = "latest"
+placement = "header"
+
+[[nav]]
+type = "system"
+label = "Featured"
+url = "/featured/"
+system_key = "featured"
+placement = "header"
+
+[[nav]]
+type = "system"
+label = "Collections"
+url = "/collections/"
+system_key = "collections"
+placement = "header"
+
+[[nav]]
+type = "system"
+label = "Archive"
+url = "/archive/"
+system_key = "archive"
+placement = "header"
+
+[[nav]]
+type = "system"
+label = "RSS"
+url = "/featured/index.xml"
+system_key = "rss"
+placement = "more"

@@ -1,0 +1,15 @@
+{
+  "schema_version": 3,
+  "site_id": "sit_01kv2ntm0be4ab6xjw4zfw1k7v",
+  "site_host": "vegetable.jant.blog",
+  "created_at": 1781428164,
+  "managed_globs": [
+    "content/**",
+    "data/jant.toml",
+    "themes/jant/**",
+    "hugo.toml",
+    ".gitignore",
+    "README.md",
+    ".jant-sync"
+  ]
+}
