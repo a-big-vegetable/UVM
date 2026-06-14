@@ -15,6 +15,29 @@ class my_env extends uvm_env;
         super.new(name,parent);
     endfunction
 
+    extern function void main_phase(uvm_phase phase);
+    extern function void build_phase(uvm_phase phase);
+    extern function void connect_phase(uvm_phase phase);//extern定义不需要virtual关键字
+endclass
+
+    virtual function void my_env::main_phase(uvm_phase phase);
+        my_sequence seq;//无论在哪个component启动sequence都可以
+        phase.raise_objection(this);
+        seq = my_sequence::type_id::create("seq");
+        seq.start(i_agt.sqr);//一定要传入对应sqr的指针,不然sequence不知道把生成的transaction交给哪个sequencer
+        phase.drop_objection(this);
+    endfunction
+
+    virtual function void my_env::connect_phase(uvm_phase phase);
+        super.connect_phase(phase);
+        i_agt.ap.connect(agt_mdl_fifo.analysis_export);
+        mdl.port.connect(agt_mdl_fifo.blocking_get_export);
+        mdl.ap.connect(mdl_scb_fifo.analysis_export);
+        scb.exp_port.connect(mdl_scb_fifo.blocking_get_export);
+        o_agt.ap.connect(agt_scb_fifo.analysis_export);
+        scb.act_port.connect (agt_scb_fifo.blocking_get_export);
+    endfunction
+
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
         i_agt = my_agent::type_id::create("i_agt", this);
@@ -28,18 +51,4 @@ class my_env extends uvm_env;
         mdl_scb_fifo = new("mdl_scb_fifo", this);
 
     endfunction
-
-    extern  function void connect_phase(uvm_phase phase);//extern定义不需要virtual关键字
-endclass
-
-    virtual function void my_env::connect_phase(uvm_phase phase);
-        super.connect_phase(phase);
-        i_agt.ap.connect(agt_mdl_fifo.analysis_export);
-        mdl.port.connect(agt_mdl_fifo.blocking_get_export);
-        mdl.ap.connect(mdl_scb_fifo.analysis_export);
-        scb.exp_port.connect(mdl_scb_fifo.blocking_get_export);
-        o_agt.ap.connect(agt_scb_fifo.analysis_export);
-        scb.act_port.connect (agt_scb_fifo.blocking_get_export);
-    endfunction
-
 `endif

@@ -20,19 +20,24 @@ class my_driver extends uvm_driver#(my_transaction);
 endclass
 
 task my_driver::main_phase(uvm_phase phase);//传入参数phase,为了能调用raise_objection
-    phase.raise_objection(this);
+ //   phase.raise_objection(this);
     vif.valid <= 0;//这里不用像v一样要在always里赋值，仿真不需要这样，像C一样执行到这里就会操作它
     vif.data <= 8'b0;//但还是用<=,这样保证了在时钟跳变的边界上遵循那个队列原则，塞入末端，不会和DUT产生读写竞争
     while(!vif.rst_n) begin
         @(posedge vif.clk);
     end
-        for(int i = 0 ;i < 2; i++) begin
-            req = new("req");//driver传入参数之后可以用用内部定义好的my_transaction的req
-            assert(req.randomize() with {pload.size() == 200;});
-            one_pkt(req);
-        end
-        repeat(5)@(posedge vif.clk);
-        phase.drop_objection(this);
+    while (1) begin
+        seq_item_port.get_next_item(req);
+        one_pkt(req);
+        seq_item_port.item_done();
+    end
+//        for(int i = 0 ;i < 2; i++) begin
+//            req = new("req");//driver传入参数之后可以用用内部定义好的my_transaction的req
+//            assert(req.randomize() with {pload.size() == 200;});
+//            one_pkt(req);
+//        end
+//        repeat(5)@(posedge vif.clk);
+//        phase.drop_objection(this);
 endtask
 
 task my_driver::one_pkt(my_transaction tr);

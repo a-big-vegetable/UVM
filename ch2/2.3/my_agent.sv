@@ -30,6 +30,9 @@ endfunction
 function void my_agent::connect_phase(uvm_phase phase);
     super.connect_phase(phase);
     ap = mon.ap;//不放在bulid_phase里是为了后续的可读性与维护
+    if (is_active == UVM_ACTIVE) begin
+        drv.seq_item_port(sqr.seq_item_export);
+    end
 endfunction
 
 `endif
