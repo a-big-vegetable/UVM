@@ -35,22 +35,22 @@ task my_scoreboard::main_phase(uvm_phase phase);
             act_port.get(get_actual);
             if(expect_queue.size() > 0) begin
                 temp_tran = expect_queue.pop_front();
-                result = get_actual.my_compore(temp_tran);
+                result = get_actual.compare(temp_tran);
                 if (result) begin
                     `uvm_info("my_scoreboard", "Compore SUCCESSFULLY", UVM_LOW)
                 end
                 else begin
                     `uvm_error("my_scoreboard", "Compore FAILED");
                     $display("the expect pkt is");
-                    temp_tran.my_print();
+                    temp_tran.print();
                     $display("the actual pkt is");
-                    get_actual.my_print();
+                    get_actual.print();
                 end
             end
             else begin
                 `uvm_error("my_scoreboard", "Received from DUT, while Expect Quene is exmpt")
                 $display("the unexpect pkt is");
-                get_actual.my_print();
+                get_actual.print();
             end
         end
     join

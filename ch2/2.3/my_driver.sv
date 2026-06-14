@@ -37,45 +37,47 @@ task my_driver::main_phase(uvm_phase phase);//传入参数phase,为了能调用r
 endtask
 
 task my_driver::one_pkt(my_transaction tr);
-    bit [7:0]  data_q[$];
     // 使用临时变量来保护 tr 不被破坏，非常重要！！！，不然monitor还怎么抓取数据呢
-    bit [47:0] tmp_data;
-    tmp_data = tr.dmac;
-    for(int i = 0; i < 6; i++) begin
-       data_q.push_back(tmp_data[7:0]);
-       tmp_data = (tmp_data >> 8);
-    end
-    //push smac to data_q
-    tmp_data = tr.smac;
-    for(int i = 0; i < 6; i++) begin
-       data_q.push_back(tmp_data[7:0]);
-       tmp_data = (tmp_data >> 8);
-    end
-    //push ether_type to data_q
-    tmp_data = tr.ether_type;
-    for(int i = 0; i < 2; i++) begin
-       data_q.push_back(tmp_data[7:0]);
-       tmp_data = (tmp_data >> 8);
-    end
-    //push payload to data_q
-    for(int i = 0; i < tr.pload.size(); i++) begin
-       data_q.push_back(tr.pload[i]);
-    end
-    //push crc to data_q
-    tmp_data = tr.crc;
-    for(int i = 0; i < 4; i++) begin
-       data_q.push_back(tmp_data[7:0]);
-       tmp_data = (tmp_data >> 8);
-    end
+//    bit [47:0] tmp_data;
+//    tmp_data = tr.dmac;
+//    for(int i = 0; i < 6; i++) begin
+//       data_q.push_back(tmp_data[7:0]);
+//       tmp_data = (tmp_data >> 8);
+//    end
+//    //push smac to data_q
+//    tmp_data = tr.smac;
+//    for(int i = 0; i < 6; i++) begin
+//       data_q.push_back(tmp_data[7:0]);
+//       tmp_data = (tmp_data >> 8);
+//    end
+//    //push ether_type to data_q
+//    tmp_data = tr.ether_type;
+//    for(int i = 0; i < 2; i++) begin
+//       data_q.push_back(tmp_data[7:0]);
+//       tmp_data = (tmp_data >> 8);
+//    end
+//    //push payload to data_q
+//    for(int i = 0; i < tr.pload.size(); i++) begin
+//       data_q.push_back(tr.pload[i]);
+//    end
+//    //push crc to data_q
+//    tmp_data = tr.crc;
+//    for(int i = 0; i < 4; i++) begin
+//       data_q.push_back(tmp_data[7:0]);
+//       tmp_data = (tmp_data >> 8);
+//    end
+    bit [7:0]  data_q[$];
+    int data_size;
 
+    data_size = tr.pack_bytes(data_q)//默认高位字节在前，低位字节在后
     `uvm_info("my_driver", "begin to driver one pkt", UVM_LOW);
 
     repeat(3) @(posedge vif.clk);
 
-    while(data_q.size() > 0) begin
+    for( int i = 0 ; i < data_size ; i++) begin
         @(posedge vif.clk);
         vif.valid <= 1'b1;
-        vif.data  <= data_q.pop_front();
+        vif.data  <= data_q[i];
     end
 
     @(posedge vif.clk);

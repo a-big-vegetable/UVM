@@ -30,9 +30,9 @@ task my_model::main_phase(uvm_phase phase);
     while(1) begin
         port.get(tr);//tr在这里被赋值了，已经指向了get传入的地方，不需要再new了
         new_tr = new("new_tr");//要再new出来一块新的内存
-        new_tr.my_copy(tr);
+        new_tr.copy(tr);
         `uvm_info("my_model","get one transaction, copy and print it:", UVM_LOW)
-        new_tr.my_print();
+        new_tr.print();
         ap.write(new_tr);
     end
 endtask

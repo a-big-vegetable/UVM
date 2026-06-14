@@ -27,47 +27,54 @@ class my_transaction extends uvm_sequence_item;
         super.new(name);
     endfunction
 
-    function void my_print();
-        $display("dmac = %0h", dmac);//%0h可以不用打印出高位没有用的0
-        $display("smac = %0h", smac);
-        $display("ether_type = %0h", ether_type);
-        for(int i = 0; i < pload.size() ; i++) begin
-            $display("pload[%0d] = %0h", i, pload[i]);
-        end
-        $display("crc = %0h", crc);
-    endfunction
-
-    function void my_copy(my_transaction tr);
-        if (tr == null) begin
-            `uvm_fatal("my_transaction", "tr is null!!!")
-        end
-        dmac = tr.dmac;
-        smac = tr.smac;
-        ether_type = tr.ether_type;
-        crc = tr.crc;
-        pload = new[tr.pload.size()];
-        for(int i = 0; i < pload.size(); i++)begin
-            pload[i] = tr.pload[i];
-        end
-    endfunction
-
-    function bit my_compore(my_transaction tr);
-        bit result;
-        if(tr == null) begin
-            `uvm_fatal("my_transaction", "tr is null")
-        end
-        result = ((dmac == tr.dmac) &&
-                  (smac == tr.smac) &&
-                  (ether_type == tr.ether_type) &&
-                  (crc == tr.crc));
-        if (pload.size() != tr.pload.size)
-            result = 0;
-        for(int i = 0; i < pload.size(); i++) begin
-            if(pload[i] != tr.pload[i])
-                result = 0;
-        end
-        return result;
-    endfunction
+    `uvm_object_utils_begin(my_transaction)
+        `uvm_field_int(dmac, UVM_ALL_ON)//UVM_ALL_ON就是所有自动化操作全部打开
+        `uvm_field_int(smac, UVM_ALL_ON)
+        `uvm_field_int(enter_type, UVM_ALL_ON)
+        `uvm_field_array_int(pload, UVM_ALL_ON)
+        `uvm_field_int(crc, UVM_LOW_ON)
+    `uvm_object_utils_end
+//    function void my_print();
+//        $display("dmac = %0h", dmac);//%0h可以不用打印出高位没有用的0
+//        $display("smac = %0h", smac);
+//        $display("ether_type = %0h", ether_type);
+//        for(int i = 0; i < pload.size() ; i++) begin
+//            $display("pload[%0d] = %0h", i, pload[i]);
+//        end
+//        $display("crc = %0h", crc);
+//    endfunction
+//
+//    function void my_copy(my_transaction tr);
+//        if (tr == null) begin
+//            `uvm_fatal("my_transaction", "tr is null!!!")
+//        end
+//        dmac = tr.dmac;
+//        smac = tr.smac;
+//        ether_type = tr.ether_type;
+//        crc = tr.crc;
+//        pload = new[tr.pload.size()];
+//        for(int i = 0; i < pload.size(); i++)begin
+//            pload[i] = tr.pload[i];
+//        end
+//    endfunction
+//
+//    function bit my_compore(my_transaction tr);
+//        bit result;
+//        if(tr == null) begin
+//            `uvm_fatal("my_transaction", "tr is null")
+//        end
+//        result = ((dmac == tr.dmac) &&
+//                  (smac == tr.smac) &&
+//                  (ether_type == tr.ether_type) &&
+//                  (crc == tr.crc));
+//        if (pload.size() != tr.pload.size)
+//            result = 0;
+//        for(int i = 0; i < pload.size(); i++) begin
+//            if(pload[i] != tr.pload[i])
+//                result = 0;
+//        end
+//        return result;
+//    endfunction
 endclass
 
 `endif
