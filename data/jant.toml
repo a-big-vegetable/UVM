@@ -1,6 +1,6 @@
 format = "jant-site"
 version = 1
-generated_at = "2026-06-14T10:40:11.000Z"
+generated_at = "2026-06-14T13:47:32.000Z"
 site_name = "vegetable"
 site_description = ""
 site_language = "zh-Hans"
@@ -62,6 +62,6 @@ type = "collection"
 sequence = "00"
 slug = "uvm-shi-zhan-xue-xi-guo-cheng"
 title = "《UVM实战》学习过程"
-entry_count = 1
+entry_count = 2
 recent_activity_label = "1m ago"
-recent_activity_iso = "2026-06-14T10:40:11.000Z"
+recent_activity_iso = "2026-06-14T13:47:32.000Z"
