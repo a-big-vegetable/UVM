@@ -1,6 +1,6 @@
 format = "jant-site"
 version = 1
-generated_at = "2026-06-14T09:24:12.000Z"
+generated_at = "2026-06-14T10:40:11.000Z"
 site_name = "vegetable"
 site_description = ""
 site_language = "zh-Hans"
@@ -56,3 +56,12 @@ label = "RSS"
 url = "/featured/index.xml"
 system_key = "rss"
 placement = "more"
+
+[[directory]]
+type = "collection"
+sequence = "00"
+slug = "uvm-shi-zhan-xue-xi-guo-cheng"
+title = "《UVM实战》学习过程"
+entry_count = 1
+recent_activity_label = "1m ago"
+recent_activity_iso = "2026-06-14T10:40:11.000Z"
