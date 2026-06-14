@@ -20,13 +20,14 @@ class my_env extends uvm_env;
     extern function void connect_phase(uvm_phase phase);//extern定义不需要virtual关键字
 endclass
 
-    virtual function void my_env::main_phase(uvm_phase phase);
-        my_sequence seq;//无论在哪个component启动sequence都可以
-        phase.raise_objection(this);
-        seq = my_sequence::type_id::create("seq");
-        seq.start(i_agt.sqr);//一定要传入对应sqr的指针,不然sequence不知道把生成的transaction交给哪个sequencer
-        phase.drop_objection(this);
-    endfunction
+//    virtual function void my_env::main_phase(uvm_phase phase);
+//    super.main_phase(phase);
+//        my_sequence seq;//无论在哪个component启动sequence都可以
+//        phase.raise_objection(this);
+//        seq = my_sequence::type_id::create("seq");
+//        seq.start(i_agt.sqr);//一定要传入对应sqr的指针,不然sequence不知道把生成的transaction交给哪个sequencer
+//        phase.drop_objection(this);
+//    endfunction
 
     virtual function void my_env::connect_phase(uvm_phase phase);
         super.connect_phase(phase);
@@ -49,6 +50,11 @@ endclass
         agt_mdl_fifo = new("agt_mdl_fifo", this);
         agt_scb_fifo = new("agt_scb_fifo", this);
         mdl_scb_fifo = new("mdl_scb_fifo", this);
+
+        uvm_config_db #(uvm_object_wrapper)::set(this,
+                                          "i_agt.spr.main_phase",
+                                          "default_sequence",
+                                          "my_sequence::type_id::get()");
 
     endfunction
 `endif
