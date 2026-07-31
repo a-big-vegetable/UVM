@@ -1,0 +1,29 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12-SP2_Full64; Runtime version V-2023.12-SP2_Full64;  Jul 31 15:33 2026
+addr = 0x00000035, data = 0xe91ad7b9, kind = 1
+addr = 0x0000003d, data = 0x61a0985b, kind = 2
+addr = 0x0000009d, data = 0x17ad833a, kind = 2
+addr = 0x000000c3, data = 0xe7b4dc07, kind = 2
+addr = 0x00000038, data = 0xb295cbe0, kind = 1
+addr = 0x00000021, data = 0x323699d3, kind = 1
+addr = 0x000000f1, data = 0x4a7cc82a, kind = 1
+addr = 0x0000003c, data = 0xcbfb2ff3, kind = 2
+addr = 0x0000009b, data = 0x4bfe95a0, kind = 2
+addr = 0x00000046, data = 0x7b5367b9, kind = 2
+addr = 0x0000000f, data = 0x60305cb5, kind = 0
+addr = 0x0000000a, data = 0x1d5072f0, kind = 1
+addr = 0x00000023, data = 0xf6497463, kind = 1
+addr = 0x0000001e, data = 0xf37cea1a, kind = 1
+addr = 0x000000c9, data = 0x4d82cff5, kind = 1
+addr = 0x000000ca, data = 0xa1f56a9a, kind = 1
+addr = 0x000000b7, data = 0x3ed63ea6, kind = 0
+addr = 0x000000de, data = 0xa75fcd00, kind = 2
+addr = 0x000000ac, data = 0x2af50de1, kind = 1
+addr = 0x000000ef, data = 0xa3b82f06, kind = 0
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0
+CPU Time:      0.330 seconds;       Data structure size:   0.0Mb
+Fri Jul 31 15:33:16 2026

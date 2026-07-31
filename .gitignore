@@ -1,3 +1,24 @@
-**/work/
 **/.claude/
 **/.vscode/
+
+# Simulator work libraries and generated files
+**/work/
+**/csrc/
+**/*.daidir/
+**/simv
+**/simv.vdb/
+**/ucli.key
+**/vcs.key
+**/DVEfiles/
+**/inter.vpd
+**/*.vpd
+**/*.fsdb
+**/*.vcd
+**/novas.*
+**/verdiLog/
+**/transcript
+transcript
+
+# Keep selected logs only when they are intentionally named and useful.
+*.log
+!**/vcs_run.log

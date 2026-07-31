@@ -29,7 +29,7 @@ task my_driver::main_phase(uvm_phase phase);//传入参数phase,为了能调用r
     while (1) begin
         seq_item_port.get_next_item(req);
         one_pkt(req);
-        seq_item_port.item_done();
+        seq_item_port.item_done();//为了防止driver没读到sequence发来的transaction增加的握手机制，调用item_done在下次get之前，就说明读到了
     end
 //        for(int i = 0 ;i < 2; i++) begin
 //            req = new("req");//driver传入参数之后可以用用内部定义好的my_transaction的req

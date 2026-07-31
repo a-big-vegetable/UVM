@@ -7,6 +7,7 @@ class my_transaction extends uvm_sequence_item;
     rand bit[15:0] ether_type;
     rand bit[31:0] crc;
     rand byte      pload[];//动态数组，引出去记得new()_
+    rand bit       crc_error;
 
     constraint pload_cons{
         pload.size() >= 46;
@@ -18,7 +19,10 @@ class my_transaction extends uvm_sequence_item;
    endfunction
 
    function void post_randomize();
-      crc = calc_crc();
+      if (crc_error)
+            ;//什么都不做，保留生成的随机（错误）CRC
+      else
+            crc = calc_crc(); // 正常包覆盖成计算出正确的CRC
    endfunction
 
     `uvm_object_utils(my_transaction)
