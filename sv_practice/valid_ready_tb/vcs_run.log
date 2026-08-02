@@ -1,0 +1,30 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12-SP2_Full64; Runtime version V-2023.12-SP2_Full64;  Aug  2 21:22 2026
+time rst_n valid ready data valid_out data_out
+6 0 0 0 0x00000000 0 0x00000000
+16 0 0 0 0x00000000 0 0x00000000
+transaction.data = 0x7b58f498
+26 1 1 1 0x7b58f498 0 0x00000000
+[MON] I get a input data ; data = 7b58f498
+36 1 0 1 0x7b58f498 1 0x7b58f498
+transaction.data = 0x43e69c85
+46 1 1 1 0x43e69c85 0 0x7b58f498
+[MON] I get a input data ; data = 43e69c85
+56 1 0 1 0x43e69c85 1 0x43e69c85
+transaction.data = 0x7452795a
+66 1 1 1 0x7452795a 0 0x43e69c85
+[MON] I get a input data ; data = 7452795a
+76 1 0 1 0x7452795a 1 0x7452795a
+transaction.data = 0x817a590e
+86 1 1 1 0x817a590e 0 0x7452795a
+[MON] I get a input data ; data = 817a590e
+96 1 0 1 0x817a590e 1 0x817a590e
+$finish called from file "tb_top.sv", line 59.
+$finish at simulation time                  100
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 100 ns
+CPU Time:      0.190 seconds;       Data structure size:   0.0Mb
+Sun Aug  2 21:22:35 2026
