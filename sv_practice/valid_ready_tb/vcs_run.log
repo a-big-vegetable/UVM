@@ -2,29 +2,356 @@ Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detec
 Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
 Chronologic VCS simulator copyright 1991-2023
 Contains Synopsys proprietary information.
-Compiler version V-2023.12-SP2_Full64; Runtime version V-2023.12-SP2_Full64;  Aug  2 21:22 2026
+Compiler version V-2023.12-SP2_Full64; Runtime version V-2023.12-SP2_Full64;  Aug  3 17:53 2026
 time rst_n valid ready data valid_out data_out
 6 0 0 0 0x00000000 0 0x00000000
 16 0 0 0 0x00000000 0 0x00000000
 transaction.data = 0x7b58f498
 26 1 1 1 0x7b58f498 0 0x00000000
 [MON] I get a input data ; data = 7b58f498
-36 1 0 1 0x7b58f498 1 0x7b58f498
+36 1 0 1 0x7b58f498 1 0x7b58f499
+[MON] I get a output data ; data = 7b58f499
 transaction.data = 0x43e69c85
-46 1 1 1 0x43e69c85 0 0x7b58f498
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 45 ns
+Mismatch! exp = 7b58f498, act = 7b58f499
+46 1 1 1 0x43e69c85 0 0x7b58f499
 [MON] I get a input data ; data = 43e69c85
-56 1 0 1 0x43e69c85 1 0x43e69c85
+56 1 0 1 0x43e69c85 1 0x43e69c86
+[MON] I get a output data ; data = 43e69c86
 transaction.data = 0x7452795a
-66 1 1 1 0x7452795a 0 0x43e69c85
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 65 ns
+Mismatch! exp = 43e69c85, act = 43e69c86
+66 1 1 1 0x7452795a 0 0x43e69c86
 [MON] I get a input data ; data = 7452795a
-76 1 0 1 0x7452795a 1 0x7452795a
+76 1 0 1 0x7452795a 1 0x7452795b
+[MON] I get a output data ; data = 7452795b
 transaction.data = 0x817a590e
-86 1 1 1 0x817a590e 0 0x7452795a
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 85 ns
+Mismatch! exp = 7452795a, act = 7452795b
+86 1 1 1 0x817a590e 0 0x7452795b
 [MON] I get a input data ; data = 817a590e
-96 1 0 1 0x817a590e 1 0x817a590e
-$finish called from file "tb_top.sv", line 59.
-$finish at simulation time                  100
+96 1 0 1 0x817a590e 1 0x817a590f
+[MON] I get a output data ; data = 817a590f
+transaction.data = 0x286ceaa3
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 105 ns
+Mismatch! exp = 817a590e, act = 817a590f
+106 1 1 1 0x286ceaa3 0 0x817a590f
+[MON] I get a input data ; data = 286ceaa3
+116 1 0 1 0x286ceaa3 1 0x286ceaa4
+[MON] I get a output data ; data = 286ceaa4
+transaction.data = 0x76983289
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 125 ns
+Mismatch! exp = 286ceaa3, act = 286ceaa4
+126 1 1 1 0x76983289 0 0x286ceaa4
+[MON] I get a input data ; data = 76983289
+136 1 0 1 0x76983289 1 0x7698328a
+[MON] I get a output data ; data = 7698328a
+transaction.data = 0xb9c531e7
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 145 ns
+Mismatch! exp = 76983289, act = 7698328a
+146 1 1 1 0xb9c531e7 0 0x7698328a
+[MON] I get a input data ; data = b9c531e7
+156 1 0 1 0xb9c531e7 1 0xb9c531e8
+[MON] I get a output data ; data = b9c531e8
+transaction.data = 0x3d091bec
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 165 ns
+Mismatch! exp = b9c531e7, act = b9c531e8
+166 1 1 1 0x3d091bec 0 0xb9c531e8
+[MON] I get a input data ; data = 3d091bec
+176 1 0 1 0x3d091bec 1 0x3d091bed
+[MON] I get a output data ; data = 3d091bed
+transaction.data = 0xd4e8e97b
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 185 ns
+Mismatch! exp = 3d091bec, act = 3d091bed
+186 1 1 1 0xd4e8e97b 0 0x3d091bed
+[MON] I get a input data ; data = d4e8e97b
+196 1 0 1 0xd4e8e97b 1 0xd4e8e97c
+[MON] I get a output data ; data = d4e8e97c
+transaction.data = 0x15e463cc
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 205 ns
+Mismatch! exp = d4e8e97b, act = d4e8e97c
+206 1 1 1 0x15e463cc 0 0xd4e8e97c
+[MON] I get a input data ; data = 15e463cc
+216 1 0 1 0x15e463cc 1 0x15e463cd
+[MON] I get a output data ; data = 15e463cd
+transaction.data = 0x3884da36
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 225 ns
+Mismatch! exp = 15e463cc, act = 15e463cd
+226 1 1 1 0x3884da36 0 0x15e463cd
+[MON] I get a input data ; data = 3884da36
+236 1 0 1 0x3884da36 1 0x3884da37
+[MON] I get a output data ; data = 3884da37
+transaction.data = 0xef6a24cb
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 245 ns
+Mismatch! exp = 3884da36, act = 3884da37
+246 1 1 1 0xef6a24cb 0 0x3884da37
+[MON] I get a input data ; data = ef6a24cb
+256 1 0 1 0xef6a24cb 1 0xef6a24cc
+[MON] I get a output data ; data = ef6a24cc
+transaction.data = 0xe143f51a
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 265 ns
+Mismatch! exp = ef6a24cb, act = ef6a24cc
+266 1 1 1 0xe143f51a 0 0xef6a24cc
+[MON] I get a input data ; data = e143f51a
+276 1 0 1 0xe143f51a 1 0xe143f51b
+[MON] I get a output data ; data = e143f51b
+transaction.data = 0xff26a61b
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 285 ns
+Mismatch! exp = e143f51a, act = e143f51b
+286 1 1 1 0xff26a61b 0 0xe143f51b
+[MON] I get a input data ; data = ff26a61b
+296 1 0 1 0xff26a61b 1 0xff26a61c
+[MON] I get a output data ; data = ff26a61c
+transaction.data = 0xcb4e6709
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 305 ns
+Mismatch! exp = ff26a61b, act = ff26a61c
+306 1 1 1 0xcb4e6709 0 0xff26a61c
+[MON] I get a input data ; data = cb4e6709
+316 1 0 1 0xcb4e6709 1 0xcb4e670a
+[MON] I get a output data ; data = cb4e670a
+transaction.data = 0x3d6ea0c8
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 325 ns
+Mismatch! exp = cb4e6709, act = cb4e670a
+326 1 1 1 0x3d6ea0c8 0 0xcb4e670a
+[MON] I get a input data ; data = 3d6ea0c8
+336 1 0 1 0x3d6ea0c8 1 0x3d6ea0c9
+[MON] I get a output data ; data = 3d6ea0c9
+transaction.data = 0x5801a693
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 345 ns
+Mismatch! exp = 3d6ea0c8, act = 3d6ea0c9
+346 1 1 1 0x5801a693 0 0x3d6ea0c9
+[MON] I get a input data ; data = 5801a693
+356 1 0 1 0x5801a693 1 0x5801a694
+[MON] I get a output data ; data = 5801a694
+transaction.data = 0xb9fa1aeb
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 365 ns
+Mismatch! exp = 5801a693, act = 5801a694
+366 1 1 1 0xb9fa1aeb 0 0x5801a694
+[MON] I get a input data ; data = b9fa1aeb
+376 1 0 1 0xb9fa1aeb 1 0xb9fa1aec
+[MON] I get a output data ; data = b9fa1aec
+transaction.data = 0xefeb7b9e
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 385 ns
+Mismatch! exp = b9fa1aeb, act = b9fa1aec
+386 1 1 1 0xefeb7b9e 0 0xb9fa1aec
+[MON] I get a input data ; data = efeb7b9e
+396 1 0 1 0xefeb7b9e 1 0xefeb7b9f
+[MON] I get a output data ; data = efeb7b9f
+transaction.data = 0xc289aae5
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 405 ns
+Mismatch! exp = efeb7b9e, act = efeb7b9f
+406 1 1 1 0xc289aae5 0 0xefeb7b9f
+[MON] I get a input data ; data = c289aae5
+416 1 0 1 0xc289aae5 1 0xc289aae6
+[MON] I get a output data ; data = c289aae6
+transaction.data = 0x4b65b35f
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 425 ns
+Mismatch! exp = c289aae5, act = c289aae6
+426 1 1 1 0x4b65b35f 0 0xc289aae6
+[MON] I get a input data ; data = 4b65b35f
+436 1 0 1 0x4b65b35f 1 0x4b65b360
+[MON] I get a output data ; data = 4b65b360
+transaction.data = 0x0fdcd620
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 445 ns
+Mismatch! exp = 4b65b35f, act = 4b65b360
+446 1 1 1 0x0fdcd620 0 0x4b65b360
+[MON] I get a input data ; data = 0fdcd620
+456 1 0 1 0x0fdcd620 1 0x0fdcd621
+[MON] I get a output data ; data = 0fdcd621
+transaction.data = 0x1b8209b8
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 465 ns
+Mismatch! exp = 0fdcd620, act = 0fdcd621
+466 1 1 1 0x1b8209b8 0 0x0fdcd621
+[MON] I get a input data ; data = 1b8209b8
+476 1 0 1 0x1b8209b8 1 0x1b8209b9
+[MON] I get a output data ; data = 1b8209b9
+transaction.data = 0x17d048d7
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 485 ns
+Mismatch! exp = 1b8209b8, act = 1b8209b9
+486 1 1 1 0x17d048d7 0 0x1b8209b9
+[MON] I get a input data ; data = 17d048d7
+496 1 0 1 0x17d048d7 1 0x17d048d8
+[MON] I get a output data ; data = 17d048d8
+transaction.data = 0x60374f29
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 505 ns
+Mismatch! exp = 17d048d7, act = 17d048d8
+506 1 1 1 0x60374f29 0 0x17d048d8
+[MON] I get a input data ; data = 60374f29
+516 1 0 1 0x60374f29 1 0x60374f2a
+[MON] I get a output data ; data = 60374f2a
+transaction.data = 0xbc0663e7
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 525 ns
+Mismatch! exp = 60374f29, act = 60374f2a
+526 1 1 1 0xbc0663e7 0 0x60374f2a
+[MON] I get a input data ; data = bc0663e7
+536 1 0 1 0xbc0663e7 1 0xbc0663e8
+[MON] I get a output data ; data = bc0663e8
+transaction.data = 0xc0002d23
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 545 ns
+Mismatch! exp = bc0663e7, act = bc0663e8
+546 1 1 1 0xc0002d23 0 0xbc0663e8
+[MON] I get a input data ; data = c0002d23
+556 1 0 1 0xc0002d23 1 0xc0002d24
+[MON] I get a output data ; data = c0002d24
+transaction.data = 0xb91ea040
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 565 ns
+Mismatch! exp = c0002d23, act = c0002d24
+566 1 1 1 0xb91ea040 0 0xc0002d24
+[MON] I get a input data ; data = b91ea040
+576 1 0 1 0xb91ea040 1 0xb91ea041
+[MON] I get a output data ; data = b91ea041
+transaction.data = 0x00409586
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 585 ns
+Mismatch! exp = b91ea040, act = b91ea041
+586 1 1 1 0x00409586 0 0xb91ea041
+[MON] I get a input data ; data = 00409586
+596 1 0 1 0x00409586 1 0x00409587
+[MON] I get a output data ; data = 00409587
+transaction.data = 0x0e64f6e8
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 605 ns
+Mismatch! exp = 00409586, act = 00409587
+606 1 1 1 0x0e64f6e8 0 0x00409587
+[MON] I get a input data ; data = 0e64f6e8
+616 1 0 1 0x0e64f6e8 1 0x0e64f6e9
+[MON] I get a output data ; data = 0e64f6e9
+transaction.data = 0xee6f35ba
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 625 ns
+Mismatch! exp = 0e64f6e8, act = 0e64f6e9
+626 1 1 1 0xee6f35ba 0 0x0e64f6e9
+[MON] I get a input data ; data = ee6f35ba
+636 1 0 1 0xee6f35ba 1 0xee6f35bb
+[MON] I get a output data ; data = ee6f35bb
+transaction.data = 0x49fd390e
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 645 ns
+Mismatch! exp = ee6f35ba, act = ee6f35bb
+646 1 1 1 0x49fd390e 0 0xee6f35bb
+[MON] I get a input data ; data = 49fd390e
+656 1 0 1 0x49fd390e 1 0x49fd390f
+[MON] I get a output data ; data = 49fd390f
+transaction.data = 0xbf085952
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 665 ns
+Mismatch! exp = 49fd390e, act = 49fd390f
+666 1 1 1 0xbf085952 0 0x49fd390f
+[MON] I get a input data ; data = bf085952
+676 1 0 1 0xbf085952 1 0xbf085953
+[MON] I get a output data ; data = bf085953
+transaction.data = 0x89399018
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 685 ns
+Mismatch! exp = bf085952, act = bf085953
+686 1 1 1 0x89399018 0 0xbf085953
+[MON] I get a input data ; data = 89399018
+696 1 0 1 0x89399018 1 0x89399019
+[MON] I get a output data ; data = 89399019
+transaction.data = 0x1208ea3d
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 705 ns
+Mismatch! exp = 89399018, act = 89399019
+706 1 1 1 0x1208ea3d 0 0x89399019
+[MON] I get a input data ; data = 1208ea3d
+716 1 0 1 0x1208ea3d 1 0x1208ea3e
+[MON] I get a output data ; data = 1208ea3e
+transaction.data = 0x7f3df534
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 725 ns
+Mismatch! exp = 1208ea3d, act = 1208ea3e
+726 1 1 1 0x7f3df534 0 0x1208ea3e
+[MON] I get a input data ; data = 7f3df534
+736 1 0 1 0x7f3df534 1 0x7f3df535
+[MON] I get a output data ; data = 7f3df535
+transaction.data = 0x75f75353
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 745 ns
+Mismatch! exp = 7f3df534, act = 7f3df535
+746 1 1 1 0x75f75353 0 0x7f3df535
+[MON] I get a input data ; data = 75f75353
+756 1 0 1 0x75f75353 1 0x75f75354
+[MON] I get a output data ; data = 75f75354
+transaction.data = 0x5f2af254
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 765 ns
+Mismatch! exp = 75f75353, act = 75f75354
+766 1 1 1 0x5f2af254 0 0x75f75354
+[MON] I get a input data ; data = 5f2af254
+776 1 0 1 0x5f2af254 1 0x5f2af255
+[MON] I get a output data ; data = 5f2af255
+transaction.data = 0xe46f406c
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 785 ns
+Mismatch! exp = 5f2af254, act = 5f2af255
+786 1 1 1 0xe46f406c 0 0x5f2af255
+[MON] I get a input data ; data = e46f406c
+796 1 0 1 0xe46f406c 1 0xe46f406d
+[MON] I get a output data ; data = e46f406d
+transaction.data = 0x2656bb45
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 805 ns
+Mismatch! exp = e46f406c, act = e46f406d
+806 1 1 1 0x2656bb45 0 0xe46f406d
+[MON] I get a input data ; data = 2656bb45
+816 1 0 1 0x2656bb45 1 0x2656bb46
+[MON] I get a output data ; data = 2656bb46
+transaction.data = 0x5342754c
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 825 ns
+Mismatch! exp = 2656bb45, act = 2656bb46
+826 1 1 1 0x5342754c 0 0x2656bb46
+[MON] I get a input data ; data = 5342754c
+836 1 0 1 0x5342754c 1 0x5342754d
+[MON] I get a output data ; data = 5342754d
+transaction.data = 0xd9a5c275
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 845 ns
+Mismatch! exp = 5342754c, act = 5342754d
+846 1 1 1 0xd9a5c275 0 0x5342754d
+[MON] I get a input data ; data = d9a5c275
+856 1 0 1 0xd9a5c275 1 0xd9a5c276
+[MON] I get a output data ; data = d9a5c276
+transaction.data = 0xd074a5f6
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 865 ns
+Mismatch! exp = d9a5c275, act = d9a5c276
+866 1 1 1 0xd074a5f6 0 0xd9a5c276
+[MON] I get a input data ; data = d074a5f6
+876 1 0 1 0xd074a5f6 1 0xd074a5f7
+[MON] I get a output data ; data = d074a5f7
+transaction.data = 0xfc227062
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 885 ns
+Mismatch! exp = d074a5f6, act = d074a5f7
+886 1 1 1 0xfc227062 0 0xd074a5f7
+[MON] I get a input data ; data = fc227062
+896 1 0 1 0xfc227062 1 0xfc227063
+[MON] I get a output data ; data = fc227063
+transaction.data = 0x90b5aa6d
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 905 ns
+Mismatch! exp = fc227062, act = fc227063
+906 1 1 1 0x90b5aa6d 0 0xfc227063
+[MON] I get a input data ; data = 90b5aa6d
+916 1 0 1 0x90b5aa6d 1 0x90b5aa6e
+[MON] I get a output data ; data = 90b5aa6e
+transaction.data = 0xde1fc58e
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 925 ns
+Mismatch! exp = 90b5aa6d, act = 90b5aa6e
+926 1 1 1 0xde1fc58e 0 0x90b5aa6e
+[MON] I get a input data ; data = de1fc58e
+936 1 0 1 0xde1fc58e 1 0xde1fc58f
+[MON] I get a output data ; data = de1fc58f
+transaction.data = 0x5f8cf86d
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 945 ns
+Mismatch! exp = de1fc58e, act = de1fc58f
+946 1 1 1 0x5f8cf86d 0 0xde1fc58f
+[MON] I get a input data ; data = 5f8cf86d
+956 1 0 1 0x5f8cf86d 1 0x5f8cf86e
+[MON] I get a output data ; data = 5f8cf86e
+transaction.data = 0x28242b54
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 965 ns
+Mismatch! exp = 5f8cf86d, act = 5f8cf86e
+966 1 1 1 0x28242b54 0 0x5f8cf86e
+[MON] I get a input data ; data = 28242b54
+976 1 0 1 0x28242b54 1 0x28242b55
+[MON] I get a output data ; data = 28242b55
+transaction.data = 0x87cf0bb5
+Error: "scoreboard.sv", 24: $unit::\scoreboard::run : at time 985 ns
+Mismatch! exp = 28242b54, act = 28242b55
+986 1 1 1 0x87cf0bb5 0 0x28242b55
+[MON] I get a input data ; data = 87cf0bb5
+996 1 0 1 0x87cf0bb5 1 0x87cf0bb6
+==== scoreboard report ===
+PASS:           0
+ERROR:          48
+$finish called from file "tb_top.sv", line 72.
+$finish at simulation time                 1000
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 100 ns
-CPU Time:      0.190 seconds;       Data structure size:   0.0Mb
-Sun Aug  2 21:22:35 2026
+Time: 1000 ns
+CPU Time:      0.180 seconds;       Data structure size:   0.0Mb
+Mon Aug  3 17:53:22 2026
